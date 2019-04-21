@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>12-静态方法holdready</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        //$.holdReady(true);暂停read方法执行  $(document).ready(function(){});
+        $.holdReady(true);
+        $(function(){
+           alert($("#bnt").val());  
+           //http://www.runoob.com/jquery/html-val.html，  不能使用$("input")[0].val();
+           $("input").val(function(index,value){
+            //console.log(index,value);
+            if(index==0){
+                alert(value);
+                //要返回
+                return value;
+            }
+            return value;
+           }) ;
+        });
+
+        /**
+         * 下面的代码没有放在核心函数里面，就意味了不是在document加载完毕之后覆盖他，
+         * 也就是说在打开这个页面的时候，从上到下执行，执行到这里代码的时候，#bnt 元素都没有加载进来，所以没有效果。
+         * 
+         * 可以把下面的代码写在body代码下面，等body加载完毕后就有效果了。
+         * 
+         * */
+        $("#bnt").on("click",function(){
+		        alert("hellworl");
+	    });
+       
+    </script>
+</head>
+
+
+<body>
+<input id="bnt" type="button" value="点击">
+
+<input id="bntReady" type="button" value="恢复ready事件">
+<script>
+    $("#bnt").on("click",function(){
+		        alert("hellworl");
+        });
+    $("#bntReady").on("click",function(){
+           $.holdReady(false);
+    });
+</script>
+</body>
+</html>
