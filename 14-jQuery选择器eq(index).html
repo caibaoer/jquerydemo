@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>14-jQuery选择器 :eq(index) 匹配一个给定索引值的元素 </title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        console.log($("tr:eq(0)").val());
+        console.log($("tr:eq(0)").text());
+        console.log($("tr:eq(0)").html());
+       });
+    </script>
+</head>
+
+
+<body>
+                <table>
+                                <tr><td>Header 1</td></tr>
+                                <tr><td>Value 1</td></tr>
+                                <tr><td>Value 2</td></tr>
+               </table>
+</body>
+</html>

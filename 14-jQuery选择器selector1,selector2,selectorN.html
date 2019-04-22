@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>14-jQuery选择器selector1,selector2,selectorN</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        var length=$("div,span,p.myClass").length;
+        console.log(length);
+        var length=$("div,span,.myClass").length;
+        console.log(length);
+       });
+    </script>
+</head>
+
+
+<body>
+    <div>div</div>
+    <p class="myClass">p class="myClass"</p>
+    <span>span</span>
+    <p class="notMyClass">p class="notMyClass"</p>
+    <label class="myClass">label</label>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>14-jQuery内容选择器:contains</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+         console.log($("div:contains('John')").length);
+       });
+
+       $(function(){
+         $("div:contains('John')").val(function(index,value){
+            $(this).css({"background-color":"yellow"});
+         });
+       });
+    </script>
+</head>
+
+
+<body>
+    <div>John Resig</div>
+    <div>George Martin</div>
+    <div>Malcom John Sinclair</div>
+    <div>Joh</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>14-jQuery选择器 even  匹配所有索引值为偶数的元素，从 0 开始计数：查找表格的1、3、5...行（即索引值0、2、4...）</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        $("tr:even").css({"background":"yellow"});
+       });
+    </script>
+</head>
+
+
+<body>
+        <table>
+                <tr><td>Header 1</td></tr>
+                <tr><td>Value 1</td></tr>
+                <tr><td>Value 2</td></tr>
+        </table>
+</body>
+</html>

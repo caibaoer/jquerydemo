@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>14-jQuery选择器parent>child  在给定的父元素下匹配所有的子元素</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+       console.log( $("form > input").length);
+       });
+    </script>
+</head>
+
+
+<body>
+        <form>
+                <label>Name:</label>
+                <input name="name" />
+                <fieldset>
+                    <label>Newsletter:</label>
+                    <input name="newsletter" />
+               </fieldset>
+        </form>
+        <input name="none" />
+</body>
+</html>

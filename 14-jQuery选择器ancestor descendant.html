@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>14-jQuery选择器ancestor descendant:在给定的祖先元素下匹配所有的后代元素 注意点：后代，注意与prev ~ siblings区别</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        //  直接使用.val()就是默认使用第一个元素  ,不能使用[0].val()的形式，需要使用 $("form input").val(function(index,value){return value});
+        //alert($("form input").val());
+        console.log($("form input").length);
+       });
+    </script>
+</head>
+
+
+<body>
+        <form>
+                <label>Name:</label>
+                <input name="name"  value="1"/>
+                <fieldset>
+                    <label>Newsletter:</label>
+                    <input name="newsletter" />
+               </fieldset>
+        </form>
+        <input name="none" />
+</body>
+</html>

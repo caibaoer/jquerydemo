@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>14-jQuery选择器 :gt(index) 匹配所有大于给定索引值的元素 </title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+       console.log( $("tr:gt(1)").length);
+       //$("tr:gt(1)").css("background-color","yellow");
+       //混合使用
+       $("tr:gt(1) :odd").css("background-color","yellow");
+       });
+    </script>
+</head>
+
+
+<body>
+                <table>
+                                <tr><td>Header 1</td></tr>
+                                <tr><td>Value 1</td></tr>
+                                <tr><td>Value 2</td></tr>
+                                <tr><td>Value A</td></tr>
+                                <tr><td>Value B</td></tr>
+                                <tr><td>Value C</td></tr>
+               </table>
+</body>
+</html>

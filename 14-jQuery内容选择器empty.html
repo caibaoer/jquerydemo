@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>14-jQuery内容选择器:empty</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        $("td:empty").val(function(index,value){
+            if(index==0){
+                //$(this).css({"background-color":"yellow","width":"180px"});
+                $(this).css({"background-color":"yellow"});
+                return value;  
+            }
+            return value;
+        });
+       });
+    </script>
+</head>
+
+
+<body>
+        <table border="1">
+                
+                <tr>
+                  <th>序号</th>
+                  <th>站点名</th>
+                  <th>网址</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Google</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Runoob</td>
+                  <td>runoob.com</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Taobao</td>
+                  <td>taobao.com</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td></td>
+                  <td>baidu.com</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Sina</td>
+                  <td>sina.com.cn</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Facebook</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>twitter</td>
+                  <td>twitter.com</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>youtube</td>
+                  <td>youtube.com</td>
+                </tr>
+                
+              </table>
+</body>
+</html>

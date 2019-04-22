@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>14-jQuery选择器 odd  匹配所有索引值为奇数的元素，从 0 开始计数：查找表格的2、4、6...行（即索引值1、3、5...）</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        $("tr:odd").css({"background":"yellow"});
+       });
+    </script>
+</head>
+
+
+<body>
+        <table>
+                <tr><td>Header 1</td></tr>
+                <tr><td>Value 1</td></tr>
+                <tr><td>Value 2</td></tr>
+        </table>
+</body>
+</html>
