@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>14-jQuery选择器 :focus 匹配当前获取焦点的元素。</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        $( "#content" ).delegate( "*", "focus", function() {
+            console.log($(this).val());
+        });
+       });
+    </script>
+    <style>
+        .focused {
+            background: #abcdef;
+                }
+    </style>
+</head>
+
+
+<body>
+        <div id="content">
+                <input tabIndex="1" value="1">
+                <input tabIndex="2">
+                <select tabIndex="3">
+                    <option>select menu</option>
+                </select>
+                <div tabIndex="4">
+                    a div
+                </div>
+        </div>
+</body>
+</html>

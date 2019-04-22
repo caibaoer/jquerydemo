@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>14-jQuery选择器 :visible 匹配所有的可见元素</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        console.log($("tr:visible").length);
+       });
+    </script>
+    
+</head>
+
+
+<body>
+                         <table>
+                                <tr style="display:none"><td>Value 1</td></tr>
+                                <tr><td>Value 2</td></tr>
+                        </table>
+</body>
+</html>

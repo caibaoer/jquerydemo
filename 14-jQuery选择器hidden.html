@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>14-jQuery选择器 :hidden 匹配所有不可见元素，或者type为hidden的元素</title>
+    <meta charset="utf-8">
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+       $(function(){
+        $("tr:hidden").show(3000);
+        alert($(":hidden").length);//---->6  为什么呢
+       });
+    </script>
+    
+</head>
+
+
+<body>
+        <table>
+                <tr style="display:none"><td>Value 1</td></tr>
+                <tr style="display:none"><td>Value 2</td></tr>
+                <tr><td><input type="hidden" value="test"></td></tr>               
+        </table>
+</body>
+</html>
